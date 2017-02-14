@@ -5,17 +5,6 @@ public class SmallGrid {
 
     IOTools ioTools = new IOTools();
 
-    ArrayList<int[]> findImmutableIndexs(ArrayList<Integer> contents){
-        ArrayList<int[]> listOfIndexValues = new ArrayList<>();
-        for(int index = 0; index < 9; index++) {
-            if (contents.get(index) != 0) {
-                listOfIndexValues.add(new int[]{contents.get(index), index});
-            }
-        }
-        return listOfIndexValues;
-    }
-
-
     int BL, MR, MM, ML, TR, TL, TM, BM, BR;
     private ArrayList<int[]> immutableIndexs;
     String topH, midH, botH, leftV, midV, rightV, position;
@@ -78,5 +67,15 @@ public class SmallGrid {
             }
         }
         return isValid;
+    }
+
+    ArrayList<int[]> findImmutableIndexs(ArrayList<Integer> contents){
+        ArrayList<int[]> listOfIndexValues = new ArrayList<>();
+        for(int index = 0; index < 9; index++) {
+            if (contents.get(index) != 0) {
+                listOfIndexValues.add(new int[]{contents.get(index), index});
+            }
+        }
+        return listOfIndexValues;
     }
 }

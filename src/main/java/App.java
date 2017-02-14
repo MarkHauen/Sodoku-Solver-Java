@@ -23,7 +23,6 @@ public class App {
         SmallGrid BR = new SmallGrid(input.get(8),"Bottom Right", true);
 
         BigGrid game = new BigGrid(TL, TM, TR, ML, MM, MR, BL, BM, BR, true);
-        BigGrid.prettyPrint(game);
 
         game.trimVerticalTopPossibilities(game.TL, game.leftVL, game.leftVM, game.leftVR);
         game.trimVerticalTopPossibilities(game.TM, game.midVL, game.midVM, game.midVR);

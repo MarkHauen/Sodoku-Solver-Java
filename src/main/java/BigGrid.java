@@ -48,6 +48,7 @@ class BigGrid {
 
         this.contents = new SmallGrid[]{topHT, topHM, topHB, midHT, midHM, midHB, botHT, botHM, botHB, leftVL, leftVM, leftVR, midVL, midVM, midVR, rightVL, rightVM, rightVR};
         this.allGridsValid = checkIfAllVaild(this.contents);
+        IOTools.prettyPrint(this);
     }
 
     private boolean checkIfAllVaild(SmallGrid[] contents) {

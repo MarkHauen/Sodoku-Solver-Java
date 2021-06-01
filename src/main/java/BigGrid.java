@@ -52,13 +52,12 @@ class BigGrid {
     }
 
     private boolean checkIfAllVaild(SmallGrid[] contents) {
-        boolean isValid = true;
         for(SmallGrid grid : contents) {
             if (!grid.isValid) {
-                isValid = false;
+                return false;
             }
         }
-        return isValid;
+        return true;
     }
 
     void trimVerticalTopPossibilities(SmallGrid gridUnderTest, SmallGrid VLgrid, SmallGrid VMgrid, SmallGrid VRgrid){

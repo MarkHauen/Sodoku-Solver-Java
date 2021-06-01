@@ -60,13 +60,12 @@ public class SmallGrid {
 
 
     boolean checkifValid(ArrayList<Integer> contents) {
-        boolean isValid = true;
         for(int x = 1; x < 10; x++) {
             if (!contents.contains(x)) {
-                isValid = false;
+                return false;
             }
         }
-        return isValid;
+        return true;
     }
 
     ArrayList<int[]> findImmutableIndexs(ArrayList<Integer> contents){
